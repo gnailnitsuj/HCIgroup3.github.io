@@ -1,6 +1,69 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #8B0000;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 40px;
+}
+
+nav a {
+    color: white;
+    margin-left: 1.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.hero {
+    background: linear-gradient(to bottom, #8B0000, #f50505);
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.hero h2{
+    font-size: 50px;
+}
+
+.hero form{
+    margin-top: 50px;
+    padding: 1rem;
+    border: 3px solid rgb(84, 0, 0);  
+    border-radius: 8px;  
+    display: inline-block;  
+    background-color: rgb(188, 185, 185);
+}
+
+.hero input{
+    font-size: 30px;
+    vertical-align: middle;
+    width: 600px;
+
+}
+
+.hero button{
+    background-color: rgb(170, 231, 255)
+}
+
+.hero button img{
+    width: 35px;
+    height: 35px;
+    vertical-align: middle;
 }
