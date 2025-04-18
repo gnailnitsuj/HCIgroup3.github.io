@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Student Support Chat</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow-x: hidden;
+    }
+
+    .sidebar {
+      background-color: #882345;
+    }
+
+    .logo-img {
+      max-width: 370px;
+    }
+
+    .sign-in-btn {
+      padding: 15px 60px;
+      margin-bottom: 100px;
+      font-size: 22px;
+    }
+
+    .main-content {
+      padding: 48px;
+      max-width: 900px;
+      width: 100%;
+      font-size: 20px;
+    }
+
+    .main-content h2 {
+      font-size: 36px;
+      font-weight: bold;
+    }
+
+    .main-content h5 {
+      font-size: 24px;
+    }
+
+    ol li {
+      margin-bottom: 20px;
+    }
+
+    .content-section {
+      margin-bottom: 40px;
+    }
+
+    .campus-img {
+      max-height: 500px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container-fluid vh-100 px-0">
+    <div class="row h-100 g-0">
+
+      <!-- sidebar -->
+      <div class="sidebar col-12 col-md-4 col-lg-3 d-flex flex-column justify-content-between align-items-center px-0">
+        <!-- bc logo -->
+        <div class="mt-5">
+          <img src="bcLogoWhite.png" class="logo-img img-fluid mb-4">
+        </div>
+        <!-- sign in btn -->
+        <div class="mb-5">
+          <a href="signInPage.html" class="sign-in-btn btn btn-warning">Sign In</a>
+          <!-- user sent to sign in page on click -->
+        </div>
+      </div>
+
+      <!-- main content -->
+      <div class="col-12 col-md-8 col-lg-9 d-flex justify-content-center align-items-center text-center">
+        <div class="main-content mx-auto">
+          <!-- header -->
+          <div class="content-section">
+            <h2>Student Support Chat</h2>
+            <p class="fw-semibold">Real-time assistance for Brooklyn College students</p>
+          </div>
+          <!-- campus img -->
+          <div class="content-section">
+            <img src="bcCampus.jpg" class="img-fluid rounded w-100 campus-img">
+          </div>
+          <!-- how it works -->
+          <div class="content-section mx-auto" style="max-width: 700px;">
+            <h5 class="mb-4">How It Works</h5>
+            <ol class="fs-5 text-start d-inline-block m-0">
+              <li>Sign in with your BC WebCentral ID</li>
+              <li>Select your support category</li>
+              <li>Connect instantly with BC support</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
