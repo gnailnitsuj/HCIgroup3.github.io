@@ -1,58 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <link href="styles.css" rel="stylesheet">
-        <title> Chat Room </title>
-    </head>
-
+<head>
+    <title>Chat Room</title>
     <style>
         html {
             box-sizing: border-box;
-            background-color: beige;
+            background-color: #882345;
         }
 
         h1 {
             text-align: center;
             font-family: Arial, Helvetica, sans-serif;
-            color: gainsboro;
+            color: black;
         }
 
-        .liveChat{
+        .liveChat {
             margin: auto;
             width: 50%;
             background-color: white;
-
+            border: 2px solid black;
+            border-radius: 12px;
+            padding: 40px;
         }
 
         p {
             font-family: Arial, Helvetica, sans-serif;
             font-size: 20px;
-            padding: 50px;
+            padding: 40px;
+            color: #555;
         }
 
-        .userIn{
+        .userIn {
             font-size: 20px;
-            padding: 16px, 15px, 16px, 0;
-
+            padding: 10px;
+            width: 100%;
         }
-        .back{
+
+        .back {
             position: absolute;
             margin-top: 4px;
             margin-left: 2px;
-            border: 1px solid #000000;
-            font-size: 40px;
+            border: 3px solid #000000;
+            background-color: white;
+            border-radius: 12px;
+            padding: 10px;
+        }
+
+        .back a {
+            color: #000000;
+            font-size: 30px;
+            text-decoration: none;
+        }
+
+        .btn {
+            margin-top: 10px;
+        }
+
+        .btn button {
+            font-size: 16px;
+            width: 80px;
+            text-align: center;
         }
     </style>
-    <body>
-        <div class="back">
-            <a href="supportPage.html" class="btn btn-light border">← Back</a>
-        </div>
-        <div class="liveChat">
-        <h1> Welcome to the chat room! </h1>
-        <p> Please enter any questions you may have and one of our representatives will get back to you immediately.</p>
-        <hr>
-        <input class="userIn" placeholder="Enter your question:"> <div class="btn"><button> Send </button></div>
-        </div>
-    </body>
+</head>
 
+<body>
+    <div class="back">
+        <a href="supportPage.html">← Back</a>
+    </div>
+
+    <div class="liveChat">
+        <h1>Welcome to the chat room!</h1>
+        <p>Please enter any questions you may have and one of our representatives will get back to you immediately.</p>
+        <hr>
+        <input id="questionInput" class="userIn" placeholder="Enter your question:">
+        <div class="btn">
+            <button id="sendBtn" type="button">Send</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("sendBtn").addEventListener("click", function () {
+            const input = document.getElementById("questionInput").value.trim();
+            if (input !== "") {
+                alert("Your question was received!");
+            } else {
+                alert("Please enter a question first.");
+            }
+        });
+    </script>
+</body>
 </html>
