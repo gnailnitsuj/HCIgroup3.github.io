@@ -15,14 +15,25 @@
     .header {
       background-color: #6b1e45;
       color: white;
-      padding: 20px 40px;
+      padding: 15px 30px;
       font-size: 20px;
       font-weight: 600;
     }
 
-    .header a {
+    .header button {
+      background: transparent;
+      border: 2px solid white;
       color: white;
-      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: 0.3s;
+      font-size: 15px;
+    }
+
+    .header button:hover {
+      background: white;
+      color: #6b1e45;
     }
 
     .container-box {
@@ -71,7 +82,7 @@
 </head>
 <body>
   <div class="header">
-     <a href="supportPage.html">Back to Home</a>
+    <button onclick="location.href='supportPage.html'">Back to Home</button>
   </div>
 
   <div class="container-box">
