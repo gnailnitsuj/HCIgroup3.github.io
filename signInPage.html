@@ -98,12 +98,10 @@
       <h1 class="signin-title">Welcome to Student Support</h1>
       <p class="signin-subtitle">Sign in with your BC WebCentral ID</p>
 
-      <form class="signin-form">
+      <form class="signin-form" action="supportPage.html" method="get">
         <input type="text" class="form-control" placeholder="ID" required />
         <input type="password" class="form-control" placeholder="Password" required />
-        <a href = "supportPage.html" class="btn signin-btn"> Sign In </a>
-        <!-- when the user submits, they will be taken to the support category page or stright to the chat -->
-        <!-- that is still to be decided -->
+        <button type="submit" class="btn signin-btn">Sign In</button>
         <div class="mt-3">
           <a href="https://pub.brooklyn.edu/mfa_registration/reset_pass.jsp" target="_blank" class="text-decoration-underline" style="font-size: 15px; color: #6e1732;">Forgot Your Password?</a>
         </div>
