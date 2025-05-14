@@ -105,9 +105,14 @@
 
   <div class="chat-area" id="chatMessages">
     <div class="bubble advisor-msg">
-      Hello! I'm Advisor from the Student Support team. I'm reviewing your question. How can I help you today?
+      Hello! I'm Advisor from the Student Support team. How can I help you today?
     </div>
   </div>
+
+  <p id="typingIndicator" style="font-style: italic; color: gray; font-size: 14px; margin: 0 0 10px 15px; display: none;">
+    Advisor is typing...
+  </p>
+  
 
   <div class="input-box" id="chatInput">
     <input type="text" id="msgInput" placeholder="Type your message" />
@@ -115,23 +120,41 @@
   </div>
 
   <div class="bottom-controls" id="controls">
-    <button class="btn btn-outline-secondary" onclick="goBack()"> Go Back</button>
-    <button class="btn btn-outline-danger" onclick="askEnd()" id="endBtn">End Chat</button>
+    <button class="btn btn-secondary" onclick="goBack()"> Go Back</button>
+    <button class="btn btn-danger" onclick="askEnd()" id="endBtn">End Chat</button>
   </div>
 
   <script>
-    function sendMsg() {
-      const msgBox = document.getElementById("msgInput");
-      const msgText = msgBox.value.trim();
-      if (msgText !== "") {
-        const wrap = document.createElement("div");
-        wrap.className = "bubble student-msg";
-        wrap.innerText = msgText;
-        document.getElementById("chatMessages").appendChild(wrap);
-        msgBox.value = "";
-        document.getElementById("chatMessages").scrollTop = document.getElementById("chatMessages").scrollHeight;
+  function sendMsg() {
+  const msgBox = document.getElementById("msgInput");
+  const msgText = msgBox.value.trim();
+  if (msgText !== "") {
+    const wrap = document.createElement("div");
+    wrap.className = "bubble student-msg";
+    wrap.innerText = msgText;
+    document.getElementById("chatMessages").appendChild(wrap);
+    msgBox.value = "";
+    document.getElementById("chatMessages").scrollTop = document.getElementById("chatMessages").scrollHeight;
+
+    showTyping(); 
+  }
+}
+
+function showTyping() {
+  const typingIndicator = document.getElementById("typingIndicator");
+  typingIndicator.style.display = "block";
+  setTimeout(() => {
+    typingIndicator.style.display = "none";
+  }, 3000);
+}
+
+    document.getElementById("msgInput").addEventListener("keypress", function(event) {
+      if (event.key === "Enter") {
+        event.preventDefault(); 
+        sendMsg();
       }
-    }
+    });
+
 
     function goBack() {
       window.location.href = "supportPage.html";
